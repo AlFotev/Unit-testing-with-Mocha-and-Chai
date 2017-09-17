@@ -1,0 +1,14 @@
+describe("Returning even or odd length of string" , ()=>{
+   it("Test if is even a function",()=>{
+       expect(typeof isOddOrEven).to.equal("function");
+   });
+    it("Test if given param is undefined when not string",()=>{
+        expect(isOddOrEven(12)).to.be.undefined;
+    });
+    it("Test if length is even",()=>{
+        expect(isOddOrEven("haha")).to.equal("even");
+    });
+    it("Test if length is odd",()=>{
+        expect(isOddOrEven("hah")).to.equal("odd");
+    });
+});
