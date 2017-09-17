@@ -1,0 +1,38 @@
+describe("Test func for returning char at index of string", () => {
+    ///two tests correct behaivour
+    it("should return 't' for Anton", () => {
+           expect(lookupChar("Anton" , 2)).to.equal("t");
+    });
+    it("should return 'Z' for Zara", () => {
+        expect(lookupChar("Zara" , 0)).to.equal("Z");
+    });
+    //check if string is "string"
+    it("should return 'undefined' for 23", () => {
+        expect(lookupChar(23 , 0)).to.be.undefined;
+    });
+    it("should return 'undefined' for true", () => {
+        expect(lookupChar(true , 0)).to.be.undefined;
+    });
+    //check if number is int
+    it("should return 'undefined' for Spiro", () => {
+        expect(lookupChar("Spiro" , "Spiro")).to.be.undefined;
+    });
+    it("should return 'undefined' for NaN", () => {
+        expect(lookupChar("Spiro" , NaN)).to.be.undefined;
+    });
+    //check if number is floating
+    it("should return 'undefined' for 3.14", () => {
+        expect(lookupChar("Spiro" , 3.14)).to.be.undefined;
+    });
+    //check if number is outside string length
+    it("should return 'undefined' for -1", () => {
+        expect(lookupChar("Spiro" , -1)).to.equal("Incorrect index");
+    });
+    it("should return 'undefined' for 5", () => {
+        expect(lookupChar("Spiro" , 5)).to.equal("Incorrect index");
+    });
+    //check when no params
+    //it("should return '' for no params", () => {
+    //    expect(lookupChar()).to.equal("Incorrect index");
+    //});
+});
