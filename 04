@@ -1,0 +1,54 @@
+describe("", () => {
+    ///tests correct behaivour addFive
+    it("should return 9 for 4", () => {
+        expect(mathEnforcer.addFive(4)).to.equal(9);
+    });
+    ///tests correct behaivour addFive negative
+    it("should return -2 for -7", () => {
+        expect(mathEnforcer.addFive(-7)).to.equal(-2);
+    });
+    ///tests correct behaivour addFive floating
+    it("should return 6.7 for 1.7", () => {
+        expect(mathEnforcer.addFive(1.7)).to.be.closeTo(6.7, 0.01);
+    });
+    ///tests correct behaivour substractTen
+    it("should return 7 for 17", () => {
+        expect(mathEnforcer.subtractTen(17)).to.equal(7);
+    });
+    ///correct behaivour substractTen negative
+    it("should return -27 for -17", () => {
+        expect(mathEnforcer.subtractTen(-17)).to.equal(-27);
+    });
+    ///tests correct behaivour substractTen floating
+    it("should return 2.7 for 12.7", () => {
+        expect(mathEnforcer.subtractTen(12.7)).to.be.closeTo(2.7, 0.01);
+    });
+    ///tests correct behaivour
+    it("should return 12 for 8 and 4", () => {
+        expect(mathEnforcer.sum(8, 4)).to.equal(12);
+    });
+    ///tests correct behaivour
+    it("should return 25.3", () => {
+        expect(mathEnforcer.sum(12.1 , 13.2)).to.be.closeTo(25.3, 0.01);
+    });
+    //check if add param is "num"
+    it("should return 'undefined' for 'Gosho'", () => {
+        expect(mathEnforcer.addFive("Gosho")).to.be.undefined;
+    });
+    //check if sub param is "num"
+    it("should return 'undefined' for 'Gosho'", () => {
+        expect(mathEnforcer.subtractTen("Gosho")).to.be.undefined;
+    });
+    //check if sum param1 is "num"
+    it("should return 'undefined' for Spiro", () => {
+        expect(mathEnforcer.sum("Spiro" , 3)).to.be.undefined;
+    });
+    //check if sum param2 is "num"
+    it("should return 'undefined' for Spiro", () => {
+        expect(mathEnforcer.sum(4 , "Spiro")).to.be.undefined;
+    });
+    //check with minuses sum func
+    it("should return -9 for -4 , -5", () => {
+        expect(mathEnforcer.sum(-4 , -5)).to.equal(-9);
+    });
+});
